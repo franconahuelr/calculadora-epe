@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Calculadora EPE</title>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="head">
+            <img src="img/logo-epe-empresa.png">
+            <h1>EMPRESA PROVINCIAL DE LA ENERGÍA DE SANTA FE</h1>
+        </div>
+    </header>
+    <main>
+        <h2>Calculadora de costo de energía eléctrica</h2>
+        <section id="cargar-campos">
+
+            <form id="form" action="/" method="GET">
+                <h3>Completa los siguientes campos:</h3>
+                <label for="selec-domicilio">Zona de domicilio</label>
+                <select name="selec-domicilio" id="selec-domicilio" required>
+                    <option value="0">--Distrito---</option>
+                    <option value="1">Distrito Centro</option>
+                    <option value="2">Distrito Sur</option>
+                    <option value="3">Distrito Oeste</option>
+                    <option value="4">Distrito Norte</option>
+                </select><br>
+                <label for="seleccion">Tipo de usuario</label>
+                <select name="seleccion" id="selec-usuario" required>
+                    <option value="0">--Usuario--</option>
+                    <option value="1">Residencial</option>
+                    <option value="2">Industrial</option>
+                </select><br>
+                <label for="kwh-mes">Cantidad de KWh del mes:</label>
+                <input type="number" name="kwh-mes" id="kwh-mes" required><br>
+                <button type="submit"><b>Calcular</b></button>
+
+            </form>
+        </section>
+        <div class="resultados">
+            <br>
+            <hr>
+            <span id="resultado"></span>
+            <div id="errores">
+            </div>
+        </div>
+        </span>
+        </div>
+    </main>
+</body>
+<script src="JS/calculadora.js"></script>
+
+</html>
